@@ -2,6 +2,8 @@ import React from 'react';
 import Home from './Home';
 import Header from './Header';
 import Footer from './Footer';
+import SearchPage from './SearchPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Statics
 import './App.css';
@@ -9,9 +11,16 @@ import './App.css';
 function App() {
   return (
     <div className="app">
-      <Header />
-      <Home />
-      <Footer />
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/search" component={SearchPage} />
+        </Switch>
+
+        <Footer />
+      </Router>
     </div>
   );
 }
