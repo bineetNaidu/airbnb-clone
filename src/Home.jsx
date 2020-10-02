@@ -1,4 +1,5 @@
 import React from 'react';
+import Banner from './Banner';
 
 // Statics
 import './Home.css';
@@ -6,7 +7,7 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home">
-      <h1>We have Home</h1>
+      <Banner />
     </div>
   );
 };
