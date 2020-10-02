@@ -1,12 +1,15 @@
 import React from 'react';
+import Home from './Home';
+import Header from './Header';
 
 // Statics
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Lets Build a Airbnb Clone.</h1>
+    <div className="app">
+      <Header />
+      <Home />
     </div>
   );
 }
