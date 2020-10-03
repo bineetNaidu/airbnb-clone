@@ -4,23 +4,26 @@ import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Avatar from '@material-ui/core/Avatar';
 import useFormState from './hooks/useFormState';
+import { Link } from 'react-router-dom';
 
 // Statics
 import './Header.css';
 
 const Header = () => {
   // Hooks && Contexts
-  const [value, handleValue, resetVal] = useFormState('');
+  const [value, handleValue] = useFormState('');
 
   // Functions
 
   return (
     <div className="header">
-      <img
-        src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
-        className="header__icon"
-        alt="Airbnb Logo"
-      />
+      <Link to="/">
+        <img
+          src="https://i.pinimg.com/originals/3c/bf/be/3cbfbe148597341fa56f2f87ade90956.png"
+          className="header__icon"
+          alt="Airbnb Logo"
+        />
+      </Link>
 
       <div className="header__center">
         <input type="text" value={value} onChange={handleValue} />

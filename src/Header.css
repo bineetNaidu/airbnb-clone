@@ -40,3 +40,30 @@
   width: 15vw;
   margin-right: 80px;
 }
+
+@media (max-width: 710px) {
+  .header__icon {
+    margin-left: 5px;
+  }
+
+  .header__right {
+    margin-right: 5px;
+  }
+
+  .header__center,
+  .header__icon,
+  .header__right {
+    flex: 1;
+  }
+}
+
+@media (max-width: 590px) {
+  .header__right {
+    margin-right: 5px;
+    width: 10vw;
+    justify-content: space-around;
+  }
+  .header__right > p {
+    display: none;
+  }
+}
